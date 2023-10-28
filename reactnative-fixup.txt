@@ -1,0 +1,102 @@
+INFO: 
+*******
+This script MAY help you. You *should* have run "npx react-native doctor"
+and fixed the issues first. This may help you with issues there if you can't figure out why doctor is failing.
+      
+BUT DO NOT try to run-android without BOTH "doctor" and this script reporting success.
+      
+Note that "WARN:" does not mean "Error", it means "be sure this is correct."
+
+All output from this script will be logged to reactnative-fixup.txt
+*********** 
+      
+
+INFO: Found npm. [386]
+INFO: JAVA_HOME is set to C:\Program Files\Java\jdk-20 [589]
+INFO: JAVA_HOME points to an existing directory. [593]
+INFO: java is in your path. [569]
+INFO: Detected version "20.0.2" of Java. [660]
+INFO: Java version is correct. [664]
+INFO: java executable location matches up with JAVA_HOME. [605]
+INFO: SDK and JDK paths appear to be good. [643]
+INFO: Environment var(s) point to an Android SDK location C:\Users\Kinsey Vo\AppData\Local\Android\Sdk. [708]
+INFO: Android SDK appears to exist. [712]
+INFO: (homebrew is not required on Windows) [433]
+WARN: This project is NOT under git management [399]
+INFO: do "git init", "git add ." and "git commit -m'Initial commit'" [400]
+INFO: We are in an NPM project. [407]
+INFO: We are really in a React-native project. [415]
+INFO: Confirmed: this is a CLI project. [426]
+INFO: Confirmed: this is not an expo rebuild/exported project. [449]
+INFO: Found adb. [517]
+INFO: (Watchman is not required on Windows.) [488]
+INFO: (ios-deploy is not required on Windows.) [502]
+INFO: (Cocoapods is not required on Windows.) [457]
+INFO: (xcode-select is not required on Windows.) [471]
+INFO: keytool is in path. [527]
+INFO: Found emulator. [542]
+INFO: Found current version of bundletool. [557]
+INFO: Correct NDK is installed. [729]
+INFO: Command-line tools are in path. [721]
+INFO: Android SDK build-tools version 30.0.3 exists. [741]
+INFO: Android SDK build-tools version 33.0.0 exists. [741]
+INFO: Android SDK build-tools version 34.0.0 exists. [741]
+INFO: (All build-tools versions exist) [749]
+INFO: Checking [newest published] npm package versions... [680]
+WARN: Expecting version ^6.6.4 of @react-navigation/drawer but found ^6.6.6 [688]
+WARN: Expecting version ^6.1.8 of @react-navigation/native but found ^6.1.9 [688]
+WARN: Expecting version ^6.9.14 of @react-navigation/native-stack but found ^6.9.16 [688]
+WARN: Expecting version ^6.3.18 of @react-navigation/stack but found ^6.3.20 [688]
+WARN: Expecting version ^2.13.2 of react-native-gesture-handler but found ^2.13.4 [688]
+WARN: Expecting version ^4.7.2 of react-native-safe-area-context but found ^4.7.4 [688]
+WARN: Expecting version ^3.25.0 of react-native-screens but found ^3.27.0 [688]
+INFO: (Tell BJM or write an issue against this script on GitHub) [695]
+INFO: ...Done checking npm package versions. [697]
+INFO: @react-native-masked-view/masked-view (^0.3.0) is present and up to date [932]
+INFO: @react-navigation/drawer (^6.6.4) is present and up to date [932]
+INFO: @react-navigation/native (^6.1.8) is present and up to date [932]
+INFO: @react-navigation/native-stack (^6.9.14) is present and up to date [932]
+INFO: @react-navigation/stack (^6.3.18) is present and up to date [932]
+INFO: react (18.2.0) is present and up to date [932]
+INFO: react-native (0.72.6) is present and up to date [932]
+INFO: react-native-gesture-handler (^2.13.2) is present and up to date [932]
+INFO: react-native-reanimated (^3.5.4) is present and up to date [932]
+INFO: react-native-safe-area-context (^4.7.2) is present and up to date [932]
+INFO: react-native-screens (^3.25.0) is present and up to date [932]
+INFO: No package.json dependencies changed. [939]
+INFO: App.js exists and has not been modified. [897]
+INFO: Found existing .prettierrc, so not modifying it. [978]
+INFO: org.gradle.java.home added or updated in gradle.properties. [863]
+INFO: gradle.properties file updated successfully. [798]
+INFO: android\universal.json file already exists. (not modifying it) [871]
+INFO: Gradle wrapper distributionUrl updated successfully. [838]
+INFO: Build.gradle file updated successfully. [779]
+INFO: gradle.properties file updated successfully. [820]
+INFO: Keystore already exists. (not overwriting it) [965]
+INFO: Be sure to:
+
+$ npm install
+
+Once this is done, you can either/both:
+
+[to run on simulator or connected device]
+
+$ npx react-native run-android
+
+[to build an APK]
+
+$ cd android && .\gradlew build && .\gradlew bundleRelease
+$ java -jar "C:\Program Files\bundletool-all-1.15.5.jar" build-apks --bundle=app\build\outputs\bundle\release\app-release.aab --output=app\build\outputs\apk\release\app-release.apks --mode=universal --ks=..\android/app/my-release-key.jks --ks-pass=pass:12345678 --ks-key-alias=my-key-alias --key-pass=pass:12345678
+
+$ java -jar "C:\Program Files\bundletool-all-1.15.5.jar" extract-apks --apks=app\build\outputs\apk\release\app-release.apks --output-dir=app\build\outputs\apk\release\ --device-spec=..\android\universal.json
+
+[to build on Mac for IOS]
+
+*Before* your first build (or after you install a new NPM package) you must:
+
+$ sudo gem update cocoapods --pre
+$ cd ios && pod update && cd ..
+
+
+
+*** Message type counts: 0 fatal, 8 warn, 0 error, 56 info
