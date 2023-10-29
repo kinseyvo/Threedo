@@ -1,3 +1,10 @@
+# Threedo
+
+- Each task has a name, duration, date added, and date completed
+- Front Page shows current tasks, separated by 'Complete' or 'Incomplete'
+- Task names and durations can be added or edited
+
+_________________________________________________________________________________________________________________________________________
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
