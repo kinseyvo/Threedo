@@ -1,8 +1,30 @@
 # Threedo
 
-- Each task has a name, duration, date added, and date completed
-- Front Page shows current tasks, separated by 'Complete' or 'Incomplete'
-- Task names and durations can be added or edited
+- Open Tasks on Front Page
+    - Show date added
+    - Display a single task in list
+- "Add Task" button on Front Page, entry form on another page
+- "Show Completed" toggle in list on front page
+    - Show completed tasks (only), incl date completed, if set
+- If a task is clicked, go to page that shows it
+    - on that page add a "Done!" button
+    - and an "Edit" button (it the task on a new page)
+- Each task can be marked completed with a "✔" on the Detail page
+
+Screenshots:
+<p float="left">
+  <img src="https://github.com/kinseyvo/Threedo/assets/54725252/a109bea5-0121-485e-a65d-46ab3832ad4a" width="33%" />
+  <img src="https://github.com/kinseyvo/Threedo/assets/54725252/a8ff84fc-6033-4896-b6f4-1af335ab3d80" width="33%" />
+  <img src="https://github.com/kinseyvo/Threedo/assets/54725252/0ed400a6-23b7-43c9-a883-9dde8792f176" width="33%" />
+</p>
+
+<p float="left">
+  <img src="https://github.com/kinseyvo/Threedo/assets/54725252/e8215b59-0da5-46b7-8bbf-63e81daa9be5" width="33%" />
+  <img src="https://github.com/kinseyvo/Threedo/assets/54725252/c3a95e30-c1d3-4f36-93fd-3f22650c88da" width="33%" />
+  <img src="https://github.com/kinseyvo/Threedo/assets/54725252/88f45b61-ee7a-4892-9640-ac3c7bd99448" width="33%" />
+</p>
+
+
 
 _________________________________________________________________________________________________________________________________________
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
